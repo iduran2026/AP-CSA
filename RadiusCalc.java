@@ -76,7 +76,7 @@ public class RadiusCalc {
         System.out.println("enter the radius of your sphere"); // FIX: clarified by saying sphere
         int r = s.nextInt();
         double result = (4.0/3.0) * Math.PI * Math.pow(r, 3); // FIX: changed to double division
-        System.out.println(r);
+        System.out.println("Volume of sphere: " + result);
         
     }
 }
