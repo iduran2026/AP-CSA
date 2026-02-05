@@ -4,6 +4,7 @@
 
 package com.mycompany.deckofcardsassignment;
 import java.util.Random;
+
 /**
  *
  * @author IDuran2026
@@ -15,7 +16,7 @@ public static void main(String[] args) {
 // Create a 2D String array called deckOfCards with 4 suits and 13 ranks
 String[][] deck = new String[4][13];
 
-// Suit names
+// suit names
 String[] suits = {"Diamonds", "Hearts", "Clubs", "Spades"};
 // Rank names
 String[] ranks = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
@@ -68,7 +69,7 @@ for (int player = 0; player < 4; player++) {
     }
 }
 
-// Shuffling method using the Fisher-Yates algorithm
+// Shuffling method 
 public static void shuffleDeck(String[][] deck) {
 Random rand = new Random();
 
@@ -82,6 +83,6 @@ String temp = deck[suit][i];
     deck[suit][i] = deck[randomSuit][randomRank];
         deck[randomSuit][randomRank] = temp;
         }
+        }
     }
-}
 }
