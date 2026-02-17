@@ -277,7 +277,7 @@ class PrivateJet extends Airplane {
 }
 
 // ============================================================================
-// MOTORCYCLE CLASS & INHERITANCE
+// MOTORCyCLE CLASS & INHERITANCE
 // ============================================================================
 class Motorcycle extends Vehicle {
  protected double engineCC; protected String style;
@@ -335,7 +335,7 @@ class SportBike extends Motorcycle {
 }
 
 // ============================================================================
-// HOVERCRAFT CLASS -
+// HOVERCRAFT CLAS
 // ============================================================================
 class Hovercraft extends Vehicle {
  private double fanDiameter; private int liftFans; private boolean amphibious;
@@ -360,7 +360,7 @@ class Hovercraft extends Vehicle {
 }
 
 // ============================================================================
-// TEST CLASS - DEMONSTRATES ALL VEHICLES
+// TEST CLaSS
 // ============================================================================
 class VehicleTest {
  public static void main(String[] args) {
@@ -402,7 +402,7 @@ class VehicleTest {
  SportBike mySportBike = new SportBike("Yamaha", 0, 1, 0, 1000, 3.1);
  System.out.println(mySportBike);
  
- // Test IMPRESSIVE VEHICLE - HOVERCRAFT
+ // Test HOVERCRAFT
  Hovercraft myHovercraft = new Hovercraft("Hovercraft Industries", 45, 12, 2000, 8, 2, true);
  System.out.println(myHovercraft);
  
@@ -413,5 +413,6 @@ class VehicleTest {
  
  myHovercraft.hover();
  mySportBike.wheelie();
+  
  }
 }
