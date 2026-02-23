@@ -10,7 +10,7 @@ package com.mycompany.food;
  */
 
 
-// ========== Abstract Base Class ==========
+// ========== Abstract Class ==========
 abstract class FoodBase {
     private String name;
     private int calories; // per 100g
@@ -45,7 +45,7 @@ interface Cookable {
     void cook();
 }
 
-// ========== Meat Hierarchy ==========
+// ========== Meat ==========
 abstract class Meat extends FoodBase implements Cookable {
     private String animalSource;
 
@@ -110,7 +110,7 @@ class Turkey extends Poultry {
     }
 }
 
-// ========== Vegetable Hierarchy ==========
+// ========== Vegetable ==========
 abstract class Vegetable extends FoodBase {
 private boolean isRoot;
 
@@ -137,19 +137,19 @@ abstract class LeafyGreen extends Vegetable {
 @Override
 public String taste() {
     return "mild and slightly bitter";
-}
+    }
 }
 
 class Spinach extends LeafyGreen {
 public Spinach() {
 super("Spinach", 23);
-}
+    }
 }
 
 class Lettuce extends LeafyGreen {
 public Lettuce() {
 super("Lettuce", 15);
-}
+    }
 }
 
 abstract class RootVegetable extends Vegetable {
@@ -175,7 +175,7 @@ class Potato extends RootVegetable {
     }
 }
 
-// ========== Fruit Hierarchy ==========
+// ========== Fruit ==========
 class Fruit extends FoodBase {
     public Fruit(String name, int calories) {
     super(name, calories);
@@ -231,7 +231,7 @@ if (f instanceof Cookable) {
     System.out.println();
 }
 
-System.out.println("=== All items are FoodBase ===");
+System.out.println("=== all items are FoodBase ===");
     for (FoodBase f : foods) {
     System.out.println(f.getName() + " is a " + f.getClass().getSimpleName());
         }
