@@ -13,12 +13,12 @@ import java.util.Random;
 public class DeckOfCardsAssignment {
 
 public static void main(String[] args) {
-// Create a 2D String array called deckOfCards with 4 suits and 13 ranks
+// Create a String array with 4 suits and 13 ranks
 String[][] deck = new String[4][13];
 
 // suit names
 String[] suits = {"Diamonds", "Hearts", "Clubs", "Spades"};
-// Rank names
+// rank names
 String[] ranks = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
 
 // Fill the deck with cards
