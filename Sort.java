@@ -24,12 +24,12 @@ public static void main(String[] args)
         friends[6] = new Contact("Mario", "Guzman", "804-555-9066");
         friends[7] = new Contact("Marsha", "Grant", "243-555-2837");
         Sorting.selectionSort(friends);
-        System.out.println("*** Selection Sort ***");
+        System.out.println("Selection Sort");
             for (Contact friend : friends)
         System.out.println(friend);
         Sorting.insertionSort(friends);
         System.out.println();
-        System.out.println("*** Insertion Sort ***");
+        System.out.println("Insertion Sort");
             for (Contact friend : friends)
         System.out.println(friend);
     }
@@ -78,7 +78,7 @@ class Contact implements Comparable
 private String firstName, lastName, phone;
 
 //-----------------------------------------------------------------
-// Constructor: Sets up the contact with the specified data.
+// Constructor: Set up the contact with the specified data
 //-----------------------------------------------------------------
 public Contact(String first, String last, String telephone)
     {
@@ -88,7 +88,7 @@ public Contact(String first, String last, String telephone)
 }
 
 //-----------------------------------------------------------------
-// Returns a description of this contact as a string.
+// Returns a description of the contact as a string
 //-----------------------------------------------------------------
 public String toString()
     {
@@ -96,7 +96,7 @@ public String toString()
 }
 
 //-----------------------------------------------------------------
-// Returns a description of this contact as a string.
+// Returns a description of the contact as a string
 //-----------------------------------------------------------------
 public boolean equals(Object other)
     {
@@ -105,7 +105,7 @@ public boolean equals(Object other)
 }
 
 //-----------------------------------------------------------------
-// Compares contacts by telephone number first, then by name
+// Compares contacts by telephone number, then name
 //-----------------------------------------------------------------
 public int compareTo(Object other)
     {
@@ -127,7 +127,7 @@ return result;
 }
 
 //-----------------------------------------------------------------
-// First name accessor.
+// First name accessor
 //-----------------------------------------------------------------
 public String getFirstName()
     {
@@ -135,7 +135,7 @@ public String getFirstName()
 }
 
 //-----------------------------------------------------------------
-// Last name accessor.
+// Last name accessor
 //-----------------------------------------------------------------
 public String getLastName()
     {
@@ -143,7 +143,7 @@ public String getLastName()
 }
 
 //-----------------------------------------------------------------
-// Phone number accessor.
+// Phone number accessor
 //-----------------------------------------------------------------
 public String getPhone()
     {
