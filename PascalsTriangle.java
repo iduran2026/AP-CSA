@@ -9,7 +9,6 @@ import java.util.Scanner;
  * @author IDuran2026
  */
 
-
 public class PascalsTriangle {
 
     public static void main(String[] args) {
@@ -31,7 +30,7 @@ public class PascalsTriangle {
     }
 
     /**
-     * Recursive method that returns the Nth row of Pascal's Triangle
+     * returns the Nth row of Pascal's Triangle
      */
     public static int[] getRow(int n) {
 
@@ -41,7 +40,7 @@ public class PascalsTriangle {
             return baseRow;
         }
 
-        // Recursive call to get previous row
+        // call to get previous row
         int[] prevRow = getRow(n - 1);
 
         // Create current row
@@ -59,5 +58,3 @@ public class PascalsTriangle {
         return currentRow;
     }
 }
-
-
