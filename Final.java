@@ -250,6 +250,7 @@ public class Game {
     }
     
     // ================= Hinys System =================
+
     static void giveHint() {
         hintsUsed++;
         
@@ -266,7 +267,7 @@ public class Game {
         }
         
         System.out.println("=== HINT (" + hintsUsed + ") ===");
-        
+       // I used some code that i found online. basically it was an outlien and i changed it to fit the following    
         if(currentRoom == 7 && !riddleSolved) {
             System.out.println("The riddle speaks of something that returns when called.");
             System.out.println("Shout into a canyon, and what answers back?");
@@ -320,7 +321,7 @@ public class Game {
             System.out.println("You found nothing of interest.");
             return;
         }
-        
+   // i fo7nd some more code online for the EXPLORE. nice to see a lot of rpg fans     
         double roll = Math.random();
         
         if(roll < EXPLORE_POTION_CHANCE) {
@@ -374,7 +375,7 @@ public class Game {
         System.out.println("\n==========================================");
         System.out.println("   " + name.toUpperCase() + " HAS BEEN DEFEATED!   ");
         System.out.println("==========================================");
-        
+       // i searhec up on Google on how to do the below and it gave me an outline of sorts that i chanbed for each boss
         if(name.equals("Black Knight")) {
             if(Math.random() < 0.6) {
                 System.out.println("\nThe Black Knight's blade clatters to the stone!");
@@ -592,7 +593,7 @@ public class Game {
             repopulateMonsters();
         }
     }
-    
+ // fo// found the following too on some niche thread on some website so i changed it to do the below    
     static void repopulateMonsters() {
         String[] types = {"Goblin", "Skeleton", "Orc", "Vampire", "Wraith", "Troll", "Death Knight"};
         String chosen = types[(int)(Math.random() * types.length)];
@@ -607,7 +608,7 @@ public class Game {
             case "Death Knight": monsterPool.add(new DeathKnight()); break;
         }
     }
-   
+   // i didnt know how to do my ideas for the room events until another thread told me about cases
     // ================= Room Events =================
     static void specialEvents() {
         switch(currentRoom) {
@@ -920,7 +921,7 @@ public class Game {
                 break;
         }
     }
-    
+    // I combined the code for combat below by combining code from videos i watched on YouTube
     // ================= combat =================
     static void combat(Monster m, boolean boss) {
         System.out.println("\n=== COMBAT: " + m.name + " ===");
@@ -962,7 +963,7 @@ public class Game {
                 System.out.print("> ");
                 
                 String c = input.nextLine();
-                
+             // new edit: had to add some sounds such as the sword_clash   
                 if(c.equals("1")) {
                     playSound("sword_clash");
                     if(m instanceof CountStrahd && ((CountStrahd)m).mistForm) {
@@ -986,6 +987,7 @@ public class Game {
                     }
                     player.useAbility(m, weakened);
                 }
+                    //found the dodgecounter online
                 else if(c.equals("3")) {
                     if(player.playerClass.equals("Rogue") && player.rogueDodgeCounter >= 3) {
                         System.out.println("Rogue passive: Auto-dodge!");
@@ -1141,7 +1143,7 @@ public class Game {
             System.out.println("\n=== LEVEL UP! Level " + level + " ===");
         }
     }
-    
+// I changed teh code from a RyiSnow video to fit the following    
     // ================= player =================
     static class Player extends Character {
         // all chars. starts with rusty sword
@@ -1259,7 +1261,7 @@ public class Game {
             }
             
             mp -= mpCost;
-            
+     // originally, there was only an attaxk option but i added aome abilities for fun and flavor       
             if(playerClass.equals("Fighter")) {
                 if(level >= 5) {
                     System.out.println("ULTIMATE: DIVINE JUDGMENT!");
@@ -1380,7 +1382,7 @@ public class Game {
             
             System.out.println("(MP: " + mp + "/" + maxMp + ")");
         }
-        
+   // sme as the abilities; i didnt want to do a leveling system but I remebered there had to be inheritance and i found rhe code     
         @Override
         void onLevelUp() {
             System.out.println("\n=== LEVEL UP! Level " + level + " ===");
@@ -1502,7 +1504,7 @@ public class Game {
         
         String attackText() { return name + " attacks!"; }
     }
-    
+    // on another comment thread, I foudn the foundation or outline for the monsters and bosses
     // ================= newbie monsters =================
     static class Goblin extends Monster {
         Goblin() { name = "Goblin"; hp = 40; maxHp = 40; }
@@ -1683,7 +1685,7 @@ public class Game {
         }
         @Override String attackText() { return phase2 ? "Smaug thrashes violently, destroying everything around him!" : "Smaug's massive tail sweeps across the treasure hoard!"; }
     }
-    
+    // It was supposed to be Smaug as the last boss but I figured a secret boss would be fun. had to ask gemini on how to do theheads though
     // ================= TIAMAT “SECRET” BOSS =================
     static class Tiamat extends Monster {
         int currentHead = 0;
@@ -1714,7 +1716,7 @@ public class Game {
         ArrayList<Item> items = new ArrayList<>();
         
         void add(Item i) { if(i == null) return; items.add(i); System.out.println("Picked up: " + i.name); }
-        
+    // aside from some code I saw on videos and wesbires, I asked reddir and they helped me find the code below    
         void show(Player p) {
             if(items.isEmpty()) { System.out.println("\n=== INVENTORY ===\nYour inventory is empty."); return; }
             System.out.println("\n=== INVENTORY ===");
