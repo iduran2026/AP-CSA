@@ -9,7 +9,7 @@ import javax.sound.sampled.*;
  */
 
 public class Game {
-
+// new edit: I asked reddit and other websites for some help on how to do the sound system and they helped.
     // ================= Sound System =================
     static HashMap<String, Clip> soundClips = new HashMap<>();
     static boolean soundEnabled = true;
